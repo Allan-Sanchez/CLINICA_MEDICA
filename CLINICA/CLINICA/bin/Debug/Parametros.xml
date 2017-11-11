@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Parametros>
+  <Servidor>DESKTOP-02FCSK2\BASE_DATOS</Servidor>
+  <BaseDatos>MEDICO</BaseDatos>
+  <Usuario></Usuario>
+  <Clave></Clave>
+  <SeguridadIntegrada>True</SeguridadIntegrada>
+</Parametros>
