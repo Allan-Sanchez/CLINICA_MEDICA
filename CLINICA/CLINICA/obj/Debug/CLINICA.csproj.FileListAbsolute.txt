@@ -21,3 +21,28 @@ C:\Users\Allan Sanchez\documents\visual studio 2012\Projects\CLINICA\CLINICA\obj
 C:\Users\Allan Sanchez\documents\visual studio 2012\Projects\CLINICA\CLINICA\obj\Debug\CLINICA.Formularios.frmMedicos.resources
 C:\Users\Allan Sanchez\documents\visual studio 2012\Projects\CLINICA\CLINICA\obj\Debug\CLINICA.Formularios.frmBusquedaMedico.resources
 C:\Users\Allan Sanchez\documents\visual studio 2012\Projects\CLINICA\CLINICA\obj\Debug\CLINICA.Formularios.frmPacientes.resources
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\bin\Debug\CLINICA.exe.config
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\obj\Debug\CLINICA.exe
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\obj\Debug\CLINICA.pdb
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\bin\Debug\CLINICA.exe
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\bin\Debug\CLINICA.pdb
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\bin\Debug\LibConexionBD.dll
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\bin\Debug\LibLlenarCombos.dll
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\bin\Debug\LibLlenarGrids.dll
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\bin\Debug\LibParametros.dll
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\bin\Debug\LibConexionBD.pdb
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\bin\Debug\LibLlenarCombos.pdb
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\bin\Debug\LibLlenarGrids.pdb
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\bin\Debug\LibParametros.pdb
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\obj\Debug\CLINICA.csprojResolveAssemblyReference.cache
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\obj\Debug\CLINICA.frmPrincipal.resources
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\obj\Debug\CLINICA.Formularios.frmBusquedaMedico.resources
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\obj\Debug\CLINICA.Formularios.frmBusqueda_Examen.resources
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\obj\Debug\CLINICA.Formularios.frmExamenes.resources
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\obj\Debug\CLINICA.FrmLogin.resources
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\obj\Debug\CLINICA.Formularios.frmMedicos.resources
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\obj\Debug\CLINICA.Formularios.frmPacientes.resources
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\obj\Debug\CLINICA.Properties.Resources.resources
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\obj\Debug\CLINICA.csproj.GenerateResource.Cache
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\obj\Debug\CLINICA.Formularios.frmBusqueda_Paciente.resources
+C:\Users\Allan Sanchez\Documents\GitHub\CLINICA_MEDICA\CLINICA\CLINICA\obj\Debug\CLINICA.Formularios.frmUsuarios.resources

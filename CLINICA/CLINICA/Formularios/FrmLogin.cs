@@ -36,15 +36,18 @@ namespace CLINICA
                 txtPassword.Focus();
             }
 
-            if (!Usuario.Validar_Usuario(txtUsuario.Text,txtPassword.Text))
+            if (!Usuario1.Validar_Usuario(txtUsuario.Text,txtPassword.Text))
             {
-                MessageBox.Show(Usuario.Mensaje,"Error");
+                MessageBox.Show(Usuario1.Mensaje,"Error");
                 txtUsuario.Focus();
                 return;
             }
 
+            Usuarios usuariologeado = Usuario1.Getusuarios(txtUsuario.Text);
+
             frmPrincipal principal = new frmPrincipal();
             this.Hide();//ocultar el formulario del login
+            principal.Usuarilogiado = usuariologeado;
             principal.Show();
             
 

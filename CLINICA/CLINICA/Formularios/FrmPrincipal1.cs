@@ -1,4 +1,5 @@
-﻿using CLINICA.Formularios;
+﻿using CLINICA.Clases;
+using CLINICA.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,14 @@ namespace CLINICA
 {
     public partial class frmPrincipal : Form
     {
+        private Usuarios usuarilogiado;
+
+        internal Usuarios Usuarilogiado
+        {
+            get { return usuarilogiado; }
+            set { usuarilogiado = value; }
+        }
+
         public frmPrincipal()
         {
             InitializeComponent();
@@ -47,7 +56,21 @@ namespace CLINICA
         {
             frmPacientes miPaciente = new frmPacientes();
             miPaciente.MdiParent = this;
+          
             miPaciente.Show();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            tssbUsuario_Log.Text = usuarilogiado.nombre + " " + usuarilogiado.apellido;
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuarios miUsuario = new frmUsuarios();
+            miUsuario.MdiParent = this;
+
+            miUsuario.Show();
         }
 
        

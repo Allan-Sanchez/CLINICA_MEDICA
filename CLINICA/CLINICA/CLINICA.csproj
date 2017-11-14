@@ -56,9 +56,23 @@
   <ItemGroup>
     <Compile Include="Clases\Examenes.cs" />
     <Compile Include="Clases\Medicos.cs" />
+    <Compile Include="Clases\NewUsuario.cs" />
     <Compile Include="Clases\Paciente.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="Clases\Utilidades.cs" />
+    <Compile Include="Formularios\frmBusqueda_Paciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmBusqueda_Paciente.Designer.cs">
+      <DependentUpon>frmBusqueda_Paciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmConsultas_temp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConsultas_temp.Designer.cs">
+      <DependentUpon>frmConsultas_temp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmPrincipal1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +116,12 @@
     <Compile Include="Formularios\frmPacientes.Designer.cs">
       <DependentUpon>frmPacientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="MEDICODataSet.cs">
       <DependentUpon>MEDICODataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -112,6 +132,12 @@
       <DependentUpon>MEDICODataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\frmBusqueda_Paciente.resx">
+      <DependentUpon>frmBusqueda_Paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConsultas_temp.resx">
+      <DependentUpon>frmConsultas_temp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPrincipal1.resx">
       <DependentUpon>FrmPrincipal1.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPacientes.resx">
       <DependentUpon>frmPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -218,6 +247,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

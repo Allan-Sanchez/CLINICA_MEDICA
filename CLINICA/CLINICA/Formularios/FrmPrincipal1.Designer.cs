@@ -37,11 +37,16 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tssbUsuario_Log = new System.Windows.Forms.ToolStripStatusLabel();
+            this.nuevaConsultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -87,6 +92,7 @@
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.usuariosToolStripMenuItem.Text = "&Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -103,10 +109,19 @@
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pacientesToolStripMenuItem});
+            this.pacientesToolStripMenuItem,
+            this.nuevaConsultaToolStripMenuItem,
+            this.listaConsultasToolStripMenuItem});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "&Consultas";
+            // 
+            // pacientesToolStripMenuItem
+            // 
+            this.pacientesToolStripMenuItem.Name = "pacientesToolStripMenuItem";
+            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.pacientesToolStripMenuItem.Text = "&Pacientes";
+            this.pacientesToolStripMenuItem.Click += new System.EventHandler(this.pacientesToolStripMenuItem_Click);
             // 
             // aToolStripMenuItem
             // 
@@ -129,12 +144,36 @@
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ayudaToolStripMenuItem.Text = "A&yuda";
             // 
-            // pacientesToolStripMenuItem
+            // statusStrip1
             // 
-            this.pacientesToolStripMenuItem.Name = "pacientesToolStripMenuItem";
-            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.pacientesToolStripMenuItem.Text = "&Pacientes";
-            this.pacientesToolStripMenuItem.Click += new System.EventHandler(this.pacientesToolStripMenuItem_Click);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssbUsuario_Log});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 420);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(757, 26);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // tssbUsuario_Log
+            // 
+            this.tssbUsuario_Log.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tssbUsuario_Log.BorderStyle = System.Windows.Forms.Border3DStyle.Raised;
+            this.tssbUsuario_Log.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tssbUsuario_Log.Name = "tssbUsuario_Log";
+            this.tssbUsuario_Log.Size = new System.Drawing.Size(128, 21);
+            this.tssbUsuario_Log.Text = "Usuario Logeado";
+            // 
+            // nuevaConsultaToolStripMenuItem
+            // 
+            this.nuevaConsultaToolStripMenuItem.Name = "nuevaConsultaToolStripMenuItem";
+            this.nuevaConsultaToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.nuevaConsultaToolStripMenuItem.Text = "&Nueva Consulta";
+            // 
+            // listaConsultasToolStripMenuItem
+            // 
+            this.listaConsultasToolStripMenuItem.Name = "listaConsultasToolStripMenuItem";
+            this.listaConsultasToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.listaConsultasToolStripMenuItem.Text = "&Lista Consultas";
             // 
             // frmPrincipal
             // 
@@ -144,6 +183,7 @@
             this.BackgroundImage = global::CLINICA.Properties.Resources.logo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(757, 446);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -153,8 +193,11 @@
             this.Text = "Programa Clinica";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,6 +217,10 @@
         private System.Windows.Forms.ToolStripMenuItem examensToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem medicosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pacientesToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel tssbUsuario_Log;
+        private System.Windows.Forms.ToolStripMenuItem nuevaConsultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaConsultasToolStripMenuItem;
     }
 }
 

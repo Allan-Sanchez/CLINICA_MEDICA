@@ -33,9 +33,9 @@ namespace CLINICA.Clases
             adaptador.Existe_Paciente(id_Paciente);
         }
 
-        public static void Existe_paciente_DPI(string DPI_Paciente)
+        public static bool Existe_paciente_DPI(string DPI_Paciente)
         {
-            adaptador.Existe_paciente_DPI(DPI_Paciente);
+            return adaptador.Existe_paciente_DPI(DPI_Paciente)==1;
         }
 
 

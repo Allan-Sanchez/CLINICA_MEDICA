@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CLINICA.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -133,5 +134,98 @@ namespace CLINICA.Formularios
             notasTextBox.Enabled = false;
            
         }
+
+        private void tsbGuardar_Click(object sender, EventArgs e)
+        {
+            if (!ValidarCampos()) return;
+            if (nuevo)
+            {
+                Paciente.InsertPaciente(dPI_PacienteTextBox.Text, nombresTextBox.Text, apellidosTextBox.Text,
+                    direccionTextBox.Text, telefonoTextBox.Text, telefono_CasaTextBox.Text, notasTextBox.Text,fecha_de_consultaDateTimePicker.Value);
+            }
+            else
+            {
+                Paciente.UpdatePaciente(dPI_PacienteTextBox.Text, nombresTextBox.Text, apellidosTextBox.Text, 
+                    direccionTextBox.Text, telefonoTextBox.Text, telefono_CasaTextBox.Text, notasTextBox.Text, 
+                    fecha_de_consultaDateTimePicker.Value,Convert.ToInt32(id_PacienteTextBox.Text));
+            }
+
+            MessageBox.Show("Datos comificados exitosamente", "Confirmacion");
+            DesabilitarCampos();
+            ActualizarDatos();
+            if (!nuevo)
+            {
+                pacientesBindingSource.Position = posicion;
+            }
+        }
+
+
+        public bool ValidarCampos() 
+        {
+            if (dPI_PacienteTextBox.Text=="")
+            {
+                MessageBox.Show("Por favor ingresar el DPI del paciente", "Error");
+                dPI_PacienteTextBox.Focus();
+                return false;
+            }
+            if (Paciente.Existe_paciente_DPI(dPI_PacienteTextBox.Text))
+            {
+                MessageBox.Show("EL paciente ya existe en la lista", "Error");
+                dPI_PacienteTextBox.Focus();
+                return false;   
+            }
+
+            if (nombresTextBox.Text=="")
+            {
+                MessageBox.Show("Ingresar al menos un nombre", "Error");
+                nombresTextBox.Focus();
+                return false;
+
+            }
+            if (apellidosTextBox.Text=="")
+            {
+                MessageBox.Show("Ingresar al menos un apellido", "Error");
+                apellidosTextBox.Focus();
+                return false;
+            }
+            if (direccionTextBox.Text=="")
+            {
+                MessageBox.Show("Ingresa la direccion del paciente", "Error");
+                direccionTextBox.Focus();
+                return false;
+            }
+            if (telefonoTextBox.Text == "") 
+            {
+                MessageBox.Show("Ingresa el numero de paciente dado caso no tenga poner N/A", "Error");
+                telefonoTextBox.Focus();
+                return false;
+            }
+            return true;
+	
+        }
+
+        private void tsbEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult rpt = MessageBox.Show("Esta seguro de eliminar al paciente de la tabla", "Confirmacion", MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (rpt == DialogResult.No) return;
+
+            Paciente.DeletePaciente(Convert.ToInt32(id_PacienteTextBox.Text));
+            MessageBox.Show("Datos eliminado correctamente", "Confirmacion");
+            ActualizarDatos();
+
+        }
+
+        private void tsbBuscar_Click(object sender, EventArgs e)
+        {
+            frmBusqueda_Paciente mipaciente = new frmBusqueda_Paciente();
+
+            mipaciente.ShowDialog();
+            if (mipaciente.Id_paciente == 0) return;
+
+            pacientesBindingSource.Position = pacientesBindingSource.Find("id_Paciente", mipaciente.Id_paciente);
+        }
+        
     }
 }
